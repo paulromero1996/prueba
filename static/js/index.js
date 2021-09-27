@@ -86,7 +86,20 @@ function LED2_Off(){
 
   // called when a message arrives
   function onMessageArrived(message) {
-    console.log("onMessageArrived:"+message.payloadString);
+	  if (message.payloadString=="nivel alto") { 
 	  document.getElementById("sensor").innerHTML=message.payloadString;
-  }
+	  }
+	  if (message.payloadString=="nivel bajo") { 
+	  document.getElementById("sensor").innerHTML=message.payloadString;
+	  }
+	  
+	  if (message.payloadString=="Nivel alto") { 
+	  document.getElementById("sensor2").innerHTML=message.payloadString;
+	  }
+	  if (message.payloadString=="Nivel bajo") { 
+	  document.getElementById("sensor2").innerHTML=message.payloadString;
+	  }
+	  
+	  
+ }
   
