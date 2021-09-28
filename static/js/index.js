@@ -22,18 +22,11 @@ function historial1() {
 	//alert("led on");
 	console.log("mostrando historial");
 	message = new Paho.MQTT.Message("historial");
-    	message.destinationName = "prromero.fis@unach.edu.ec/prueba";
+    	message.destinationName = "prromero.fis@unach.edu.ec/prueba1";
     	client.send(message);
   
 }
-function LED2_Off(){	
-	//alert("led off");
-	console.log("led off");
-	message = new Paho.MQTT.Message("OFF2");
-    	message.destinationName = "prromero.fis@unach.edu.ec/prueba1";
-    	client.send(message);
-	document.getElementById("sensor2").innerHTML="APAGADO";
-}
+
 
 
 
