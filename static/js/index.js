@@ -95,6 +95,9 @@ function historial1() {
 	  if (message.payloadString=="nivel alto") { 
 	  document.getElementById("historial11").innerHTML=message.payloadString;
 	  }
-	  
+
+	  if (message.payloadString=="nivel bajo") { 
+	  document.getElementById("historial11").innerHTML=message.payloadString;
+	  }
  }
   
