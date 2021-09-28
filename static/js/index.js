@@ -18,11 +18,10 @@ function LED1_Off(){
 	document.getElementById("sensor").innerHTML="APAGADO";
 }
 
-function LED2_On() {
+function historial() {
 	//alert("led on");
-	console.log("led on");
-	document.getElementById("sensor2").innerHTML="ENCENDIDO";
-	message = new Paho.MQTT.Message("ON2");
+	console.log("mostrando historial");
+	message = new Paho.MQTT.Message("historial");
     	message.destinationName = "prromero.fis@unach.edu.ec/prueba1";
     	client.send(message);
   
