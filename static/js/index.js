@@ -91,28 +91,28 @@ function historial2() {
 	  mensaje=message.payloadString;
 	  vector=mensaje.split(";");
 	  tamano=vector.length;
+	  document.getElementById("sensor").innerHTML=vector[0];
+	  document.getElementById("sensor2").innerHTML=vector[1];
 	  
-	  if(tamano>=2 && var1=="h1"){
-	  document.getElementById("historial11").innerHTML=vector[0];
+	  if(tamano>=3 && var1=="h1"){
+	  document.getElementById("historial11").innerHTML=vector[2];
 	  }
-	  if(tamano>=2 && var2=="h2"){
-	  document.getElementById("historial22").innerHTML=vector[1];
-	  }
+
 	  
 	  
-	  if (message.payloadString=="nivel alto") { 
-	  document.getElementById("sensor").innerHTML=message.payloadString;
-	  }
-	  if (message.payloadString=="nivel bajo") { 
-	  document.getElementById("sensor").innerHTML=message.payloadString;
-	  }
+	//  if (message.payloadString=="nivel alto") { 
+	 // document.getElementById("sensor").innerHTML=message.payloadString;
+	 // }
+	//  if (message.payloadString=="nivel bajo") { 
+	 // document.getElementById("sensor").innerHTML=message.payloadString;
+	 // }
 	  
-	  if (message.payloadString=="Nivel alto") { 
-	  document.getElementById("sensor2").innerHTML=message.payloadString;
-	  }
-	  if (message.payloadString=="Nivel bajo") { 
-	  document.getElementById("sensor2").innerHTML=message.payloadString;
-	  }
+	  //if (message.payloadString=="Nivel alto") { 
+	 // document.getElementById("sensor2").innerHTML=message.payloadString;
+	  //}
+	 // if (message.payloadString=="Nivel bajo") { 
+	 // document.getElementById("sensor2").innerHTML=message.payloadString;
+	 // }
 
  }
   
