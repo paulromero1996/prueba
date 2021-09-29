@@ -60,7 +60,7 @@ function historial1() {
 	
     client.subscribe("prromero.fis@unach.edu.ec/prueba1");	  
     client.subscribe("prromero.fis@unach.edu.ec/prueba");
-    message = new Paho.MQTT.Message("hola desde la web");
+    message = new Paho.MQTT.Message("hola");
     message.destinationName = "prromero.fis@unach.edu.ec/prueba1";
     client.send(message);
 	
