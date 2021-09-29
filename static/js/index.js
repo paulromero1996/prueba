@@ -84,7 +84,10 @@ function historial1() {
 	  tamano=vector.length;
 	  
 	  if(tamano>=2){
-	  document.getElementById("historial11").innerHTML=vector[1];
+	  document.getElementById("historial11").innerHTML=vector[0];
+	  }
+	  if(tamano>=2){
+	  document.getElementById("historial22").innerHTML=vector[1];
 	  }
 	  
 	  
