@@ -17,14 +17,23 @@ function LED1_Off(){
     	client.send(message);
 	document.getElementById("sensor").innerHTML="APAGADO";
 }
-
+var1="";
 function historial1() {
 	//alert("led on");
 	console.log("mostrando historial");
 	message = new Paho.MQTT.Message("historial");
     	message.destinationName = "prromero.fis@unach.edu.ec/prueba1";
     	client.send(message);
-  
+  	var1="h1";
+}
+var2="";
+function historial2() {
+	//alert("led on");
+	console.log("mostrando historial Sensor 2");
+	message = new Paho.MQTT.Message("historial2");
+    	message.destinationName = "prromero.fis@unach.edu.ec/prueba1";
+    	client.send(message);
+  	var2="h2";
 }
 
 
@@ -83,10 +92,10 @@ function historial1() {
 	  vector=mensaje.split(";");
 	  tamano=vector.length;
 	  
-	  if(tamano>=2){
+	  if(tamano>=2 && var1=="h1"){
 	  document.getElementById("historial11").innerHTML=vector[0];
 	  }
-	  if(tamano>=2){
+	  if(tamano>=2 && var2=="h2"){
 	  document.getElementById("historial22").innerHTML=vector[1];
 	  }
 	  
