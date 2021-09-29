@@ -79,6 +79,15 @@ function historial1() {
 
   // called when a message arrives
   function onMessageArrived(message) {
+	  mensaje=message.payloadString;
+	  vector=mensaje.split(";");
+	  tamano=vector.length;
+	  
+	  if(tamano>=2){
+	  document.getElementById("historial11").innerHTML=vector[1];
+	  }
+	  
+	  
 	  if (message.payloadString=="nivel alto") { 
 	  document.getElementById("sensor").innerHTML=message.payloadString;
 	  }
