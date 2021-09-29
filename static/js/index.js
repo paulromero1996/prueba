@@ -26,15 +26,7 @@ function historial1() {
     	client.send(message);
   	var1="h1";
 }
-var2="";
-function historial2() {
-	//alert("led on");
-	console.log("mostrando historial Sensor 2");
-	message = new Paho.MQTT.Message("historial2");
-    	message.destinationName = "prromero.fis@unach.edu.ec/prueba1";
-    	client.send(message);
-  	var2="h2";
-}
+
 
 
 
@@ -69,7 +61,7 @@ function historial2() {
     client.subscribe("prromero.fis@unach.edu.ec/prueba1");	  
     client.subscribe("prromero.fis@unach.edu.ec/prueba");
     message = new Paho.MQTT.Message("hola desde la web");
-    message.destinationName = "prromero.fis@unach.edu.ec/prueba";
+    message.destinationName = "prromero.fis@unach.edu.ec/prueba1";
     client.send(message);
 	
   }
