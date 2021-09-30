@@ -1,52 +1,119 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript">
+
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript">		
+		</script>
+
+		<script src="/static/js/index.js">			
+		</script>
 		
+		<title>EMBEBIDOS</title>
+	</head>
+	<!-- CARATULA Y ENCABEZADO -->
+
+	<CENTER>
+		<h2 id='et1'>
+			UNIVERSIDAD NACIONAL DE CHIMBORAZO <br>
+		</h2>
+		
+		<h3
+			FACULTAD DE INGENIERIA <br>
+			<div align="center"><img id="imagen" src="https://www.unach.edu.ec/wp-content/uploads/2021/03/logo_unach_2021-02.png" alt="user" width="350"><br>
+			ELECTRONICA Y TELECOMUNCIONES <br><br>
+			DISPOSITIVOS EMBEBIDOS Y LAB.<br><br>		
+		</h3>
+	</CENTER>
+	
+	
+	
+	<!-- MENSAJES Y TITULOS -->
+	<hr />
+	<h2 style= 'margin-left: 50px'>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		MONITOR DE SENSORES:
+	</h2>
+
+	<!-- VALOR DE SENSOR -->
+
+	<h2 id="sensor1" style= 'margin-left: 170px'>
+		Sensor 1: 0.00
+	</h2>
+		
+	<h2 id="sensor2" style= 'margin-left: 170px'>
+		Sensor 2: 0.00
+	</h2>
+		
+
+	<hr />
+	
+	<!-- CONTROL DE BOTONES -->
+	<h2 style= 'margin-left: 50px'>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		MOSTRAR SENSOR - 1
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		MOSTRAR SENSOR - 2 
+		<br><br>
+		
+		<!-- BOTONES ENCENDIDO -->		
+		<button id = 'LED1On' type="button" style='width:200px; height:40px;  margin-left: 50px' onclick="LED1_On();">
+			MOSTRAR SENSOR 1
+		</button>
+		
+		<button id = 'LED2On' type="button" style='width:200px; height:40px; margin-left: 50px' onclick="LED2_On();">
+			MOSTRAR SENSOR 2
+		</button>	
+		<br>
+		<br>
+		
+	</h2>
+		
+	<!-- HISTORIAL -->
+	<hr />
+	<h2 style= 'margin-left: 50px'>
+	    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		HISTORIAL DE SENSORES:
+		<br><br>
+			
+	<!-- BOTONE HISTORIAL -->			
+		<button id = 'Export1' type="button" style='width:200px; height:40px; margin-left: 50px' onclick="Exportar1();">
+			MOSTRAR HISTORIAL DE SENSORES
+		</button>
+
+	</h2>
+		
+	<hr />
+	<hr />
+		
+	<!-- VALOR DE SENSOR -->
+	<h2 id="historial1">
+	---------------Historial - S1---------------
+	</h2>
+	<hr />
+	<h2 id="historial2">
+	---------------Historial - S2---------------
+	</h2>
+		
+		
+	<!-- NOMBRE -->
+	<hr />
+	<hr />
+	<h3 style= 'margin-left: 50px'>
+		<br>ESTUDIANTE: &nbsp;&nbsp;&nbsp; Yautibug Daniel
+	</h3>
+
+	<script>
+	/*
+	function LED1_On() {
+		alert("led on");
+		console.log("led on");
+	  
+	}
+	function LED1_Off(){
+		alert("led off");
+		console.log("led off");
+	}
+	*/
 	</script>
-
-	<script src="/static/js/index.js">
-		
-	</script>
-	<title>PRUEBA EMBEBIDOS</title>
-</head>
-<body>
-
-	<h1 id='et1'>
-		PRUEBA EMBEBIDOS
-	</h1>
-	
-
-	<h1>
-		SENSOR 1:
-	</h1>
-		
-	<h1 id="sensor">
-		------
-	</h1>
-	<h1>
-		SENSOR 2:
-	</h1>
-	
-	<h1 id="sensor2">
-		--------
-	</h1>
-	
-	<button id = 'historial' type="button" style='width:200px; height:40px; background-color: #00FF00; margin-left: 50px' onclick="historial1();">
-			HISTORIAL 
-
-	</button>
-	
-		<button id = 'mostrar' type="button" style='width:200px; height:40px; background-color: #00FF00; margin-left: 50px' onclick="mostrar();">
-			Mostrar estado 
-
-	</button>
-	<h1>HISTORIAL DE LOS SENSORES: \n </h><h id="historial11"></h1>
-
-	
-	
-
-
-
-</body>
+	</body>
 </html>
