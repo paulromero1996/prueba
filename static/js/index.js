@@ -10,13 +10,7 @@ function LED1_On(){
 	//var1="H1";
 }
 
-function LED2_On(){	
-	message = new Paho.MQTT.Message("SENSOR2");
-	message.destinationName ="prromero.fis@unach.edu.ec/prueba1";
-	client.send(message);
-	console.log("MUESTRA SENSOR 2");
-	//var2="H2";
-}
+
 
 
 function Exportar1(){	
@@ -79,12 +73,9 @@ function Exportar1(){
 	datos=mensaje.split(";")  
 	lon =datos.length;
 	  
-	  if(mensaje=="Alta"||mensaje=="Baja"){
+	  if(mensaje=="Alta"||mensaje=="Baja"||mensaje=="Vacio"||mensaje=="Lleno"){
 	  	document.getElementById("sensor1").innerHTML=mensaje;
-	  }
-	  if(mensaje=="Vacio"||mensaje=="Lleno"){
-	  	document.getElementById("sensor2").innerHTML=mensaje;	  
-	  }
+
 	  
 	  if(lon==2&&var1=="PRESIONAR"){
 		document.getElementById("historial1").innerHTML=datos[0];
