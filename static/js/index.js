@@ -24,7 +24,7 @@ function Exportar1(){
 	message.destinationName ="prromero.fis@unach.edu.ec/prueba1";
 	client.send(message);
 	console.log("MUESTRA HISTORIAL");
-	var1="H1";
+	var1="PRESIONAR";
 }
 
 
@@ -86,7 +86,7 @@ function Exportar1(){
 	  	document.getElementById("sensor2").innerHTML=mensaje;	  
 	  }
 	  
-	  if(lon==2&&var1=="H1"){
+	  if(lon==2&&var1=="PRESIONAR"){
 		document.getElementById("historial1").innerHTML=datos[0];
 	  	document.getElementById("historial2").innerHTML=datos[1];
 	  }
