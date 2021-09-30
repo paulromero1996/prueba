@@ -74,6 +74,7 @@ function Exportar1(){
 	  if(lon==2&&(datos[0]=="Alta"||datos[0]=="Baja"||datos[1]=="Vacio"||datos[1]=="Lleno")){
 	  	document.getElementById("sensor1").innerHTML=datos[0];
 		  document.getElementById("sensor2").innerHTML=datos[1];
+		   }
 
 	  
 	  if(lon==2&&var1=="PRESIONAR"){
