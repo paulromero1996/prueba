@@ -11,8 +11,6 @@ function LED1_On(){
 }
 
 
-
-
 function Exportar1(){	
 	message = new Paho.MQTT.Message("HISTORIAL");
 	message.destinationName ="prromero.fis@unach.edu.ec/prueba1";
