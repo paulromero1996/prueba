@@ -1,4 +1,4 @@
-//https://www.eclipse.org/paho/clients/js/
+
 
 var1="";
 function historial1() {
@@ -13,12 +13,6 @@ function historial1() {
 
 
 
-
-
-
-
-// Create a client instance
-  //client = new Paho.MQTT.Client("postman.cloudmqtt.com", 14970);
   
   client = new Paho.MQTT.Client("maqiatto.com", 8883, "web_" + parseInt(Math.random() * 100, 10));
 
@@ -43,7 +37,7 @@ function historial1() {
 	
     client.subscribe("prromero.fis@unach.edu.ec/prueba1");	  
     client.subscribe("prromero.fis@unach.edu.ec/prueba");
-    message = new Paho.MQTT.Message("hola");
+    message = new Paho.MQTT.Message("---");
     message.destinationName = "prromero.fis@unach.edu.ec/prueba1";
     client.send(message);
 	
@@ -61,7 +55,7 @@ function historial1() {
     }
   }
 
-  // called when a message arrives
+
   function onMessageArrived(message) {
 	  mensaje=message.payloadString;
 	  vector=mensaje.split(";");
@@ -75,19 +69,6 @@ function historial1() {
 
 	  
 	  
-	//  if (message.payloadString=="nivel alto") { 
-	 // document.getElementById("sensor").innerHTML=message.payloadString;
-	 // }
-	//  if (message.payloadString=="nivel bajo") { 
-	 // document.getElementById("sensor").innerHTML=message.payloadString;
-	 // }
-	  
-	  //if (message.payloadString=="Nivel alto") { 
-	 // document.getElementById("sensor2").innerHTML=message.payloadString;
-	  //}
-	 // if (message.payloadString=="Nivel bajo") { 
-	 // document.getElementById("sensor2").innerHTML=message.payloadString;
-	 // }
 
  }
   
