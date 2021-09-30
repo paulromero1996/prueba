@@ -73,7 +73,7 @@ function Exportar1(){
 	datos=mensaje.split(";")  
 	lon =datos.length;
 	  
-	  if(mensaje=="Alta"||mensaje=="Baja"||mensaje=="Vacio"||mensaje=="Lleno"){
+	  if(datos=="Alta"||datos=="Baja"||datos=="Vacio"||datos=="Lleno"){
 	  	document.getElementById("sensor1").innerHTML=datos[0];
 		  document.getElementById("sensor2").innerHTML=datos[1];
 
