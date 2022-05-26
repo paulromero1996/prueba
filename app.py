@@ -12,7 +12,7 @@ PORT_NUMBER = port
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-server = app.server
+
 @app.route("/")
 def root():
 	return render_template("index.html")
